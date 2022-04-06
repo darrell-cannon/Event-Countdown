@@ -1,20 +1,20 @@
 ﻿Myfirstapp
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\Users\darre\source\repos\MyFirstWPFApp\MyFirstWPFApp\obj\Debug\net6.0-windows\
+C:\Users\darre\source\repos\MyFirstWPFApp\MyFirstWPFApp\obj\Release\net6.0-windows\
 Myfirstapp
 none
 false
-TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 C:\Users\darre\source\repos\MyFirstWPFApp\MyFirstWPFApp\App.xaml
 3-197339043
 
-81308474069
+61864772676
 209-1954942810
 Birthdays.xaml;CreateNewDateWindow.xaml;ResourceDictionary.xaml;
 
-False
+True
 

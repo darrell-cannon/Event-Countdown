@@ -19,6 +19,7 @@ using Path = System.IO.Path;
 using System.Windows.Markup;
 
 
+
 namespace MyFirstWPFApp
 {
     
@@ -48,9 +49,13 @@ namespace MyFirstWPFApp
 
         public static void ReadDateFile()
         {
-            if (File.Exists("C:\\Users\\darre\\source\\repos\\MyFirstWPFApp\\MyFirstWPFApp\\DateListFile"))
+            string fileName = String.Format(@"{0}\DateListFileLocalised.txt", System.Windows.Forms.Application.StartupPath);
+
+            MessageBox.Show(fileName);
+
+            if (File.Exists(fileName))
             {
-                var lines = File.ReadLines("C:\\Users\\darre\\source\\repos\\MyFirstWPFApp\\MyFirstWPFApp\\DateListFile");
+                var lines = File.ReadLines(fileName);
                 
                 if (lines != null)
                 {
@@ -163,7 +168,9 @@ namespace MyFirstWPFApp
 
         public static void SaveDateList()
         {
-            using (TextWriter tw = new StreamWriter("C:\\Users\\darre\\source\\repos\\MyFirstWPFApp\\MyFirstWPFApp\\DateListFile"))
+            string fileName = String.Format(@"{0}\DateListFileLocalised.txt", System.Windows.Forms.Application.StartupPath);
+            
+            using (TextWriter tw = new StreamWriter(fileName))
             {
                 foreach (var item in dateList)
                 {
@@ -186,6 +193,7 @@ namespace MyFirstWPFApp
             }
 
             SortListAndDislay();
+            SaveDateList();
 
         }
 

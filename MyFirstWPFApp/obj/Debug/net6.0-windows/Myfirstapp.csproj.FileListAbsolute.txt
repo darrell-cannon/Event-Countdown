@@ -41,3 +41,4 @@ C:\Users\darre\source\repos\MyFirstWPFApp\MyFirstWPFApp\bin\Debug\net6.0-windows
 C:\Users\darre\source\repos\MyFirstWPFApp\MyFirstWPFApp\bin\Debug\net6.0-windows\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\darre\source\repos\MyFirstWPFApp\MyFirstWPFApp\obj\Debug\net6.0-windows\Myfirstapp.csproj.CopyComplete
 C:\Users\darre\source\repos\MyFirstWPFApp\MyFirstWPFApp\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\darre\source\repos\MyFirstWPFApp\MyFirstWPFApp\obj\Debug\net6.0-windows\Myfirstapp.csproj.ResolveComReference.cache
