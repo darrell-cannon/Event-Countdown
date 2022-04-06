@@ -1,0 +1,65 @@
+﻿<Window x:Class="MyFirstWPFApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyFirstWPFApp"
+        mc:Ignorable="d"
+        Title="Upcoming Events" Height="450" Width="800">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+
+
+    <Grid Name ="MainGrid" Background="Orange" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Button Click="OpenCreateNewDatePage" Background="Ivory" BorderThickness="2" BorderBrush="Black" Margin="29,10,682,329">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <TextBlock TextWrapping ="Wrap">Add <LineBreak></LineBreak> New <LineBreak></LineBreak>Date</TextBlock>
+        </Button>
+        
+        <Image Source="https://cdn.pixabay.com/photo/2016/08/19/23/34/banner-1606562_1280.png" Margin="153,-36,193,252"/>
+        <TextBlock x:Name="BirthdayText" HorizontalAlignment="Left" Height="270" TextWrapping="Wrap" VerticalAlignment="Top" Width="332" Margin="212,106,0,0"/>
+        <TextBlock TextWrapping="Wrap" Margin="291,40,294,329"><Run BaselineAlignment="Center" FontSize="15" FontWeight="Bold" Text="Days until our birthdays"/></TextBlock>
+        <StackPanel Visibility="Hidden" Margin="300,0,46,0">
+            <Label FontSize ="20" Content ="Name:" Target="{Binding ElementName=newName}"/>
+            <TextBox Padding="10,10" x:Name ="newName"/>
+            <Button Padding="15,10" FontWeight="Bold" Background="DarkOrange" Foreground="Black" Content="Confirm" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-1.147"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.38"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </StackPanel>
+        <WrapPanel Name ="DisplayWrapPanel" Margin="65,152,65,33">
+            
+        </WrapPanel>
+        
+        <Button Click="ClickDelete" Background="Ivory" BorderThickness="2" BorderBrush="Black" Margin="665,10,46,329">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <TextBlock TextWrapping ="Wrap"><Run Text="Delete"/></TextBlock>
+        </Button>
+
+    </Grid>
+</Window>
