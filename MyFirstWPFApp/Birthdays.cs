@@ -51,8 +51,6 @@ namespace MyFirstWPFApp
         {
             string fileName = String.Format(@"{0}\DateListFileLocalised.txt", System.Windows.Forms.Application.StartupPath);
 
-            MessageBox.Show(fileName);
-
             if (File.Exists(fileName))
             {
                 var lines = File.ReadLines(fileName);
